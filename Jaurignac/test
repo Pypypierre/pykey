@@ -1,0 +1,36 @@
+from tkinter import *
+ 
+  
+ 
+def ouvrir():
+ 
+    patryck = PhotoImage(file='logo.png')
+ 
+    item = can1.create_image(300, 300, image = patryck)
+ 
+    can1.pack()
+ 
+  
+ 
+fen = Tk()
+ 
+fileMenu = Menubutton(fen, text = 'TEST')
+ 
+fileMenu.pack(side = TOP)
+ 
+me1 = Menu(fileMenu)
+ 
+me1.add_command(label = 'Ouvrir', command = ouvrir)
+ 
+fileMenu.configure(menu = me1)
+ 
+  
+ 
+can1 = Canvas(fen, width = 500, height = 500, bg = 'white')
+ 
+  
+ 
+fen.mainloop ()
+
+
+
